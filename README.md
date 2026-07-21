@@ -1,26 +1,147 @@
 # EEG-Based Emotion Recognition System
 
-## Project Overview
-This project develops a semi-supervised learning model using Variational Autoencoders (VAEs) and Recurrent Neural Networks (RNNs) to recognize emotions from EEG (electroencephalogram) data. The system is designed to handle multi-channel EEG data, employing deep learning techniques to both encode temporal dynamics and decode them to reconstruct the input signals, aiding in feature extraction and classification tasks.
+A deep learning-based **EEG emotion recognition system** that leverages **Semi-Supervised Learning**, **Variational Autoencoders (VAEs)**, and **Recurrent Neural Networks (RNNs)** to classify emotional states from multi-channel EEG signals. The model learns meaningful latent representations from both labeled and unlabeled EEG data, improving classification performance while reconstructing EEG signals for robust feature learning.
+
+---
+
+## Overview
+
+Emotion recognition from EEG signals is a challenging task due to the high dimensionality, temporal dependencies, and limited availability of labeled data. This project addresses these challenges by combining **Variational Autoencoders (VAEs)** for unsupervised feature learning with **Recurrent Neural Networks (RNNs)** for modeling temporal dynamics in EEG recordings.
+
+The semi-supervised architecture enables the model to effectively utilize both labeled and unlabeled EEG data, resulting in improved generalization and more robust emotion classification.
+
+---
 
 ## Features
-- Data Normalization: Standardize EEG data to ensure model accuracy and efficiency.
-- Advanced Visualization: Implement multiple data visualization strategies to inspect the quality and characteristics of EEG data.
-- Semi-supervised Learning Model: Leverage unlabeled data to enhance the model's performance using VAEs integrated with RNNs.
-- Model Evaluation: Assess model performance with various metrics, visualizing the comparison between original and reconstructed signals.
+
+- **EEG Data Preprocessing**
+  - Normalize multi-channel EEG signals for stable and efficient model training.
+
+- **Semi-Supervised Learning**
+  - Leverage unlabeled EEG data to improve feature representation and classification performance.
+
+- **Variational Autoencoder (VAE)**
+  - Learn compact latent representations while reconstructing EEG signals.
+
+- **Recurrent Neural Networks (RNNs)**
+  - Capture temporal dependencies within sequential EEG recordings.
+
+- **Emotion Classification**
+  - Predict emotional states from learned latent features.
+
+- **Signal Reconstruction**
+  - Compare original and reconstructed EEG signals to evaluate representation quality.
+
+- **Visualization Tools**
+  - Generate visualizations for EEG signals, latent features, training performance, and reconstruction quality.
+
+---
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Language | Python |
+| Deep Learning | TensorFlow / Keras |
+| Model Architecture | Variational Autoencoder (VAE), Recurrent Neural Network (RNN) |
+| Data Processing | NumPy, Pandas |
+| Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+
+---
+
+## Model Architecture
+
+The proposed framework consists of three major stages:
+
+1. **Data Preprocessing**
+   - EEG normalization
+   - Data preparation
+   - Sequence generation
+
+2. **Feature Learning**
+   - Variational Autoencoder learns compact latent representations
+   - Reconstruction loss encourages meaningful feature extraction
+
+3. **Emotion Classification**
+   - RNN processes latent sequences
+   - Predicts emotional states based on learned temporal patterns
+
+---
+
+## Key Features Learned
+
+- Temporal EEG signal representation
+- Latent feature extraction
+- Semi-supervised representation learning
+- Emotion classification from brain signals
+- EEG signal reconstruction
+
+---
 
 ## Installation
-To set up the project environment:
-1. Clone this repository to your local machine.
-2. Ensure that you have Python 3.8+ installed.
-3. Install all required dependencies with the following command:
-	pip install -r requirements.txt
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/eeg-emotion-recognition.git
+cd eeg-emotion-recognition
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
 
 ## Usage
-To run the main program:
-	python main.py
 
-This will execute the data preprocessing, model training, and visualization scripts.
+Run the complete pipeline:
 
-##Dataset
-Due to privacy constraints, the EEG dataset utilized in this project cannot be shared publicly. The dataset includes multi-channel EEG recordings annotated with emotional states. Users wishing to test the system should substitute in their dataset following the same structure expected by the scripts.
+```bash
+python main.py
+```
+
+The pipeline performs:
+
+- EEG data preprocessing
+- Model training
+- Emotion classification
+- Signal reconstruction
+- Visualization of results
+
+---
+
+## Dataset
+
+Due to privacy and licensing restrictions, the EEG dataset used in this project cannot be distributed publicly.
+
+The dataset consists of:
+
+- Multi-channel EEG recordings
+- Emotion annotations
+- Sequential brain activity signals
+
+Users can evaluate the system using their own EEG dataset by following the expected data structure used within the project.
+
+---
+
+## Learning Outcomes
+
+This project provided practical experience in:
+
+- EEG signal processing
+- Semi-supervised deep learning
+- Variational Autoencoders (VAEs)
+- Recurrent Neural Networks (RNNs)
+- Time-series modeling
+- Emotion recognition
+- Representation learning
+- Neural signal reconstruction
+
+---
+- Multi-modal emotion recognition using EEG and physiological signals
+- Real-time emotion prediction
+- Deployment as an interactive emotion recognition application
